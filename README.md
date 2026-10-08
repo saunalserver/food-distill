@@ -30,7 +30,8 @@ under $10.
         │
         ▼
  4 · COUNT   grams from the database's own portions (or the amount you typed)
-             × the row's nutrients per 100 g  →  943 kcal · 30 g protein · 94 g carbs · 51 g fat
+             × the row's nutrients per 100 g
+             →  943 kcal · 30 g protein · 94 g carbs · 51 g fat
 ```
 
 ## Head-to-head
@@ -98,11 +99,15 @@ All raw replies, the scoring scripts and the truth files are in [`results/`](res
 `"large double double and a toasted everything bagel w cream cheese"`: the Tim Hortons order expands into what's
 actually in it (coffee, 2 tbsp cream, 2 tsp sugar), and the cream cheese is its own item.
 
-| **① Read**: the model turns text into items | **② Search & pick**: candidates from the database, the model's choice highlighted |
+![The four-step strip for this meal: read 5 items, 18 searches, 1 pick by exact name and 4 by the model, 440 kcal](docs/img/flow.png)
+
+| **① Read**: the model turns text into items | **② Search & pick**: the top hits are cinnamon-raisin bagels; the model picks the everything bagel |
 |---|---|
 | ![The model's streamed JSON and the five parsed items](docs/img/read.png) | ![Search for everything bagel: queries tried, ranked candidate rows with source and kcal, the chosen row highlighted](docs/img/pick.png) |
-| **③ Count**: grams × database values, with the source of every number | **④ The pipeline at a glance**: timings for each step |
-| ![Calorie table: five items, matched rows, grams, kcal, protein, carbs, fat and a total of 440 kcal](docs/img/count.png) | ![The four-step strip: read, search, pick, count, each with its timing](docs/img/flow.png) |
+
+**③ Count**: grams × database values, with the source of every number
+
+![Calorie table: five items, matched rows, grams, kcal, protein, carbs, fat and a total of 440 kcal](docs/img/count.png)
 
 ## How it was built
 
