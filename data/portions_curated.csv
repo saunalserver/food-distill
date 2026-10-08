@@ -1,0 +1,25 @@
+name,unit,grams,why
+sourdough bread,slice,45,USDA SR row says 139 g (a slab of French loaf); a sandwich slice is 40-50 g
+pizza,slice,107,no slice row; FNDDS 1 piece of a medium cheese pizza
+pepperoni pizza,slice,110,FNDDS '1 piece, medium pizza' (label matcher picked the whole pizza)
+shrimp,piece,6,only USDA row is 3 oz; one large shrimp is ~6 g raw
+ice cream,serving,87,FDA reference amount 2/3 cup (USDA match picked a medium ice-cream cup)
+ice cream,scoop,66,one scoop ~ 1/2 cup
+peanuts,handful,28,1 oz; USDA fallback used a 146 g cup
+walnuts,handful,28,1 oz; USDA fallback used a 100 g ground cup
+orange juice,glass,248,8 fl oz; USDA fallback used 'fruit yields' 86 g
+romaine lettuce,cup,47,1 cup shredded; household fallback assumed 240 g of water
+chocolate chip cookies,piece,16,one medium cookie; USDA labels are brand bars
+chocolate sandwich cookies,piece,11.3,USDA '3 cookies = 34 g' (one Oreo ~ 11 g)
+chocolate,piece,10,a square; USDA only has a 112 g bar
+omelette,piece,120,a 2-egg omelette; USDA row is one large egg (61 g)
+omelette,serving,120,same as piece
+scrambled eggs,serving,120,2 eggs; USDA row is one large egg (61 g)
+spaghetti bolognese,serving,350,about 1.5 cups; FNDDS 'serving' 554 g is a restaurant platter
+spaghetti bolognese,bowl,350,same as serving
+pho,bowl,600,a restaurant bowl with broth; USDA only has 1 cup (245 g)
+pho,serving,600,same as bowl
+caesar salad,bowl,180,a meal bowl ~2.5 cups; USDA rows are 1 cup / a side salad
+green salad,bowl,85,a bowl ~2.5 cups of greens; USDA rows are 1 cup / a garnish
+caesar salad,serving,180,same as bowl
+green salad,serving,85,same as bowl

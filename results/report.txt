@@ -1,0 +1,37 @@
+390 meals (13 with every item weighed)
+
+## food-distill  (390 meals, unusable replies 0 = 0.0%; time median 0.75 s, p90 1.40 s, max 4.8 s)
+  all             n= 390 | kcal: median err 14.9%, ≤10% 42%, ≤25% 59% | protein 16% | carbs 17% | fat 25%
+  explicit grams  n=  13 | kcal: median err 5.1%, ≤10% 62%, ≤25% 77% | protein 4% | carbs 20% | fat 1%
+  vague portions  n= 377 | kcal: median err 15.6%, ≤10% 41%, ≤25% 58% | protein 16% | carbs 17% | fat 26%
+
+## minicpm-2b-base-pipeline  (390 meals, unusable replies 59 = 15.1%; time median 0.90 s, p90 1.68 s, max 5.5 s)
+  all             n= 390 | kcal: median err 40.9%, ≤10% 22%, ≤25% 38% | protein 45% | carbs 43% | fat 52%
+  explicit grams  n=  13 | kcal: median err 34.4%, ≤10% 38%, ≤25% 46% | protein 28% | carbs 91% | fat 57%
+  vague portions  n= 377 | kcal: median err 40.9%, ≤10% 22%, ≤25% 38% | protein 45% | carbs 43% | fat 52%
+
+## minicpm-2b-base  (390 meals, unusable replies 334 = 85.6%; time median 0.62 s, p90 0.94 s, max 17.8 s)
+  all             n= 390 | kcal: median err 100.0%, ≤10% 2%, ≤25% 5% | protein 100% | carbs 100% | fat 100%
+  explicit grams  n=  13 | kcal: median err 100.0%, ≤10% 15%, ≤25% 15% | protein 100% | carbs 100% | fat 100%
+  vague portions  n= 377 | kcal: median err 100.0%, ≤10% 1%, ≤25% 5% | protein 100% | carbs 100% | fat 100%
+
+## gemma-e2b  (390 meals, unusable replies 1 = 0.3%; time median 1.35 s, p90 1.74 s, max 16.2 s)
+  all             n= 390 | kcal: median err 36.4%, ≤10% 16%, ≤25% 37% | protein 51% | carbs 46% | fat 48%
+  explicit grams  n=  13 | kcal: median err 21.2%, ≤10% 23%, ≤25% 54% | protein 10% | carbs 87% | fat 42%
+  vague portions  n= 377 | kcal: median err 36.9%, ≤10% 16%, ≤25% 37% | protein 54% | carbs 46% | fat 49%
+
+## gemma-e4b  (390 meals, unusable replies 4 = 1.0%; time median 2.31 s, p90 4.17 s, max 29.8 s)
+  all             n= 390 | kcal: median err 36.1%, ≤10% 17%, ≤25% 39% | protein 52% | carbs 45% | fat 46%
+  explicit grams  n=  13 | kcal: median err 14.5%, ≤10% 31%, ≤25% 62% | protein 29% | carbs 18% | fat 28%
+  vague portions  n= 377 | kcal: median err 37.1%, ≤10% 17%, ≤25% 38% | protein 52% | carbs 45% | fat 47%
+
+## gemma-26b  (390 meals, unusable replies 0 = 0.0%; time median 2.55 s, p90 7.32 s, max 51.0 s)
+  all             n= 390 | kcal: median err 33.8%, ≤10% 21%, ≤25% 41% | protein 32% | carbs 39% | fat 44%
+  explicit grams  n=  13 | kcal: median err 6.9%, ≤10% 69%, ≤25% 77% | protein 6% | carbs 10% | fat 21%
+  vague portions  n= 377 | kcal: median err 35.6%, ≤10% 19%, ≤25% 40% | protein 33% | carbs 40% | fat 44%
+
+## gemma-31b  (390 meals, unusable replies 1 = 0.3%; time median 3.65 s, p90 8.49 s, max 44.4 s)
+  all             n= 390 | kcal: median err 38.9%, ≤10% 17%, ≤25% 35% | protein 38% | carbs 39% | fat 53%
+  explicit grams  n=  13 | kcal: median err 5.3%, ≤10% 77%, ≤25% 77% | protein 8% | carbs 7% | fat 11%
+  vague portions  n= 377 | kcal: median err 40.0%, ≤10% 15%, ≤25% 34% | protein 40% | carbs 40% | fat 53%
+

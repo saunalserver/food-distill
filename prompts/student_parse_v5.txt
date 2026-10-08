@@ -1,0 +1,1 @@
+Parse the food log into JSON: {"items":[{"food","brand","qty","unit","size","state","prep"}]}. Only parse; never estimate nutrition.

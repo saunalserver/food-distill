@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<title>food-distill — local 2B meal logger</title>
+<style>
+  :root { color-scheme: dark; }
+  body { font-family: ui-monospace, Menlo, monospace; background: #111; color: #ddd;
+         max-width: 52rem; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 1.1rem; } h1 span { color: #888; font-weight: normal; }
+  textarea { width: 100%; box-sizing: border-box; font: inherit; background: #1b1b1b;
+             color: #eee; border: 1px solid #333; border-radius: 6px; padding: .6rem; }
+  button { font: inherit; background: #2e7d32; color: #fff; border: 0; border-radius: 6px;
+           padding: .5rem 1.2rem; cursor: pointer; margin-top: .4rem; }
+  button:disabled { background: #444; }
+  button.alt { background: none; color: #888; border: 1px solid #333; padding: .45rem .8rem; }
+  .stage { border: 1px solid #333; border-radius: 8px; padding: .8rem; margin: 1rem 0; }
+  .stage h3 { margin: 0 0 .5rem; font-size: .75rem; color: #888; text-transform: uppercase; letter-spacing: .08em; }
+  pre { margin: 0; white-space: pre-wrap; word-break: break-word; font-size: .85rem; }
+  #toks { color: #9c9; min-height: 1.2em; }
+  table { border-collapse: collapse; width: 100%; font-size: .85rem; }
+  th, td { border: 1px solid #333; padding: .35rem .5rem; text-align: left; vertical-align: top; }
+  th { color: #888; font-weight: normal; }
+  tr.total td { font-weight: bold; border-top: 2px solid #555; }
+  .note { color: #c77; font-size: .75rem; }
+  .approx { color: #ca7; }
+  .meta { color: #666; font-size: .75rem; }
+  .src { color: #777; font-size: .7rem; }
+  body:not(.pipeline) .pipe-only { display: none; }
+  label.toggle { font-size: .8rem; color: #888; display: inline-block; margin: .6rem 0 0 1rem; }
+
+  /* flow strip: the four steps, lit up as the meal moves through them */
+  .flow { display: flex; align-items: stretch; gap: .3rem; margin: 1.2rem 0 0; font-size: .75rem; }
+  .flow .step { flex: 1; border: 1px solid #333; border-radius: 8px; padding: .5rem .6rem; color: #666;
+                transition: border-color .3s, color .3s; }
+  .flow .step b { display: block; color: #888; font-weight: normal; text-transform: uppercase; letter-spacing: .08em; }
+  .flow .step i { display: block; font-style: normal; margin-top: .25rem; min-height: 1.1em; }
+  .flow .arrow { align-self: center; color: #444; }
+  .flow .step.on { border-color: #ca7; color: #ca7; } .flow .step.on b { color: #ca7; }
+  .flow .step.done { border-color: #2e7d32; color: #9c9; } .flow .step.done b { color: #9c9; }
+  .items { margin-top: .6rem; font-size: .8rem; color: #aaa; }
+  .items span { display: inline-block; border: 1px solid #333; border-radius: 4px; padding: .1rem .4rem; margin: .15rem .2rem 0 0; }
+
+  /* search view: one block per item */
+  .item { margin: 0 0 1rem; } .item:last-child { margin: 0; }
+  .item .q { font-size: .72rem; color: #666; margin: .2rem 0 .3rem; }
+  .item .q em { font-style: normal; color: #999; }
+  .cands { list-style: none; padding: 0; margin: 0; font-size: .78rem; }
+  .cands li { display: grid; grid-template-columns: 1.6rem 1fr 4.5rem 8.5rem; gap: .5rem; color: #888;
+              padding: .1rem .3rem; border-radius: 4px; animation: in .25s both; }
+  .cands li .k { text-align: right; } .cands li .s { color: #666; font-size: .7rem; }
+  .cands li.picked { color: #9c9; background: #1a2a1a; transition: background .3s, color .3s; }
+  .cands li.picked .s { color: #9c9; }
+  .why { font-size: .72rem; color: #9c9; margin: .25rem 0 0 2.1rem; }
+  @keyframes in { from { opacity: 0; transform: translateX(-4px); } }
+  @media (prefers-reduced-motion: reduce) { .cands li { animation: none; } }
+
+  /* vs gemma */
+  .bars { display: grid; grid-template-columns: 9.5rem 1fr; gap: .2rem .8rem; font-size: .78rem; margin: .4rem 0 .9rem; }
+  .bars .lbl { color: #888; } .bars .row { display: flex; align-items: center; gap: .5rem; }
+  .bars .bar { height: .7rem; border-radius: 0 4px 4px 0; background: #555; }
+  .bars .bar.us { background: #9c9; }
+  .bars .who { width: 13rem; flex: none; color: #888; } .bars .val { color: #ddd; }
+  .bars .metric { grid-column: 1 / -1; color: #888; margin-top: .5rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
+  #vs td:first-child, #vs td:nth-child(2) { white-space: nowrap; }
+  td.us { color: #9c9; } .bad { color: #c77; } .ok { color: #9c9; }
+</style>
+</head>
+<body class="pipeline">
+<h1>food-distill <span>— 2B model on a home GPU · {{N_FOODS}}-food database · no cloud</span></h1>
+<form id="f">
+  <textarea id="text" rows="2" placeholder="what did you eat? e.g. large double double and a boston cream, 2 slices toast w butter"></textarea>
+  <button id="go">log it</button>
+  <button type="button" class="alt" id="rnd" title="a random benchmarked meal, so the Gemma comparison below fills in">↻ benchmark meal</button>
+  <label class="toggle"><input type="checkbox" id="pipe" checked> pipeline view</label>
+</form>
+
+<div class="flow pipe-only">
+  <div class="step" id="s1"><b>1 · read</b>2B model turns text into items<i></i></div><span class="arrow">→</span>
+  <div class="step" id="s2"><b>2 · search</b>{{N_FOODS}} foods, full-text<i></i></div><span class="arrow">→</span>
+  <div class="step" id="s3"><b>3 · pick</b>2B model chooses a real row<i></i></div><span class="arrow">→</span>
+  <div class="step" id="s4"><b>4 · count</b>grams × database values<i></i></div>
+</div>
+
+<div class="stage pipe-only"><h3>1 · the model reads the meal (MiniCPM5-2B fine-tune, RTX 2060)</h3>
+  <pre id="toks"></pre><div class="items" id="items"></div></div>
+<div class="stage pipe-only"><h3>2 + 3 · database search → the model picks the match</h3><div id="cands"><p class="meta">—</p></div></div>
+<div class="stage"><h3>4 · portion → nutrients (all numbers from the database)</h3>
+  <div id="tbl"><p class="meta">—</p></div>
+  <p class="meta" id="meta"></p>
+</div>
+<div class="stage"><h3>vs general models — Gemma 4, 5B to 31B (E2B/E4B are what Chompass runs on the phone)</h3>
+  <div id="vs"><p class="meta">—</p></div>
+  <div id="bench"><p class="meta">loading benchmark…</p></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const SRC = {usda_fndds:"USDA FNDDS", usda_sr:"USDA SR", usda_found:"USDA Foundation", cnf:"Canadian CNF",
+             cofid:"UK CoFID", ciqual:"French Ciqual", usda_branded:"USDA Branded", off:"Open Food Facts"};
+const SHOW = 6;   // candidates shown per item (the model sees 10)
+$("pipe").onchange = e => document.body.classList.toggle("pipeline", e.target.checked);
+
+const step = (n, cls, txt) => { const s = $("s" + n); s.className = "step " + cls; if (txt !== undefined) s.querySelector("i").textContent = txt; };
+const amount = it => `${it.qty} ${it.unit}${it.size ? " " + it.size : ""}`;
+const norm = s => s.toLowerCase().replace(/\s+/g, " ").trim();
+
+$("f").onsubmit = async e => {
+  e.preventDefault();
+  const text = $("text").value.trim(); if (!text) return;
+  $("go").disabled = $("rnd").disabled = true; $("toks").textContent = ""; $("items").innerHTML = "";
+  $("cands").innerHTML = '<p class="meta">—</p>'; $("vs").innerHTML = '<p class="meta">—</p>';
+  $("tbl").innerHTML = '<p class="meta">thinking on the home GPU…</p>'; $("meta").textContent = "";
+  [1, 2, 3, 4].forEach(n => step(n, "", "")); step(1, "on", "reading…");
+  const t0 = performance.now(), rows = [];
+  let nItems = 0;
+  try {
+    const r = await fetch("/api/parse", {method: "POST", headers: {"Content-Type": "application/json"},
+                                         body: JSON.stringify({text})});
+    const rd = r.body.getReader(), dec = new TextDecoder();
+    let buf = "";
+    while (true) {
+      const {value, done} = await rd.read(); if (done) break;
+      buf += dec.decode(value, {stream: true});
+      let i;
+      while ((i = buf.indexOf("\n\n")) >= 0) {
+        const frame = buf.slice(0, i); buf = buf.slice(i + 2);
+        const ev = (frame.match(/^event: (.*)$/m) || [])[1];
+        const d = JSON.parse((frame.match(/^data: (.*)$/m) || [])[1]);
+        if (ev === "tok") $("toks").textContent += d.t;
+        if (ev === "items") {
+          nItems = d.items.length;
+          step(1, "done", `${((performance.now() - t0) / 1000).toFixed(2)} s · ${nItems} item${nItems === 1 ? "" : "s"}`);
+          $("items").innerHTML = d.items.map(it => `<span>${esc(amount(it))} ${esc(it.food)}${it.brand ? ` [${esc(it.brand)}]` : ""}${it.state ? ` <span class="src">${esc(it.state)}</span>` : ""}</span>`).join("");
+          $("cands").innerHTML = d.items.map((it, j) => `<div class="item" id="it${j}"><b>${esc(it.food)}</b> <span class="src">${esc(amount(it))}</span><p class="q">searching…</p></div>`).join("") || '<p class="note">no food in that message</p>';
+          if (nItems) { step(2, "on", "searching…"); step(3, "on", "…"); }
+          $("tbl").innerHTML = '<p class="meta">searching the database…</p>';
+        }
+        if (ev === "row") { rows.push(d); renderItem(rows.length - 1, d); flowProgress(rows, nItems); }
+        if (ev === "done") { render(d); compare(text, d); }
+        if (ev === "err") { $("tbl").innerHTML = `<p class="note">${esc(d.msg)}</p>`; [1, 2, 3, 4].forEach(n => $("s" + n).classList.remove("on")); }
+      }
+    }
+  } catch (err) { $("tbl").innerHTML = `<p class="note">${esc(err)}</p>`; }
+  $("go").disabled = $("rnd").disabled = false;
+};
+
+function flowProgress(rows, n) {
+  const ms = rows.reduce((a, r) => a + (r.ms_search || 0), 0), q = rows.reduce((a, r) => a + (r.searches || []).length, 0);
+  const by = {}; rows.forEach(r => r.picked_by && (by[r.picked_by] = (by[r.picked_by] || 0) + 1));
+  const fin = rows.length >= n ? "done" : "on";
+  step(2, fin, `${q} searches · ${ms} ms`);
+  step(3, fin, Object.entries(by).map(([k, v]) => `${v} by ${k}`).join(" · ") || "—");
+}
+
+function renderItem(j, r) {
+  const el = $("it" + j); if (!el) return;
+  // the searches tried, in order: the user's words, alias, then word-dropping backoffs (repeats merged)
+  const seen = new Map(); (r.searches || []).forEach(([q, n]) => seen.set(q, Math.max(n, seen.get(q) || 0)));
+  const qs = [...seen].map(([q, n]) => `<em>"${esc(q)}"</em> ${n}`).join(" → ");
+  const cs = r.cands || [];
+  let h = `<b>${esc(r.food)}</b> <span class="src">${esc(amount(r))}</span>` +
+          `<p class="q">searched ${qs || "—"} · ${r.pool} rows → re-ranked → top ${cs.length} shown to the model · ${r.ms_search} ms</p>`;
+  if (!cs.length) { el.innerHTML = h + '<p class="note">nothing in the database</p>'; return; }
+  const idx = [...Array(Math.min(SHOW, cs.length)).keys()];
+  if (r.pick != null && r.pick >= SHOW) idx.push(r.pick);
+  h += '<ul class="cands">' + idx.map((i, n) => {
+    const c = cs[i];
+    return `<li data-i="${i}" style="animation-delay:${n * 45}ms"><span>${i + 1}</span>` +
+           `<span>${esc(c.name)}${c.brand ? ` <span class="s">[${esc(c.brand)}]</span>` : ""}</span>` +
+           `<span class="k">${c.kcal100 == null ? "—" : Math.round(c.kcal100)}</span><span class="s">${SRC[c.src] || c.src}</span></li>`;
+  }).join("") + "</ul>";
+  if (cs.length > idx.length) h += `<p class="src" style="margin:.1rem 0 0 2.1rem">+ ${cs.length - idx.length} more · kcal per 100 g</p>`;
+  el.innerHTML = h;
+  if (r.pick == null) return;
+  const why = {model: `✓ the model picked #${r.pick + 1} of ${cs.length} · ${(r.ms_pick / 1000).toFixed(2)} s`,
+               "exact name": `✓ #1 is exactly "${r.food}" — no model call needed`,
+               "only result": "✓ only one result"}[r.picked_by] || `✓ #${r.pick + 1}`;
+  setTimeout(() => {   // the pick lands after the list has appeared
+    const li = el.querySelector(`li[data-i="${r.pick}"]`); if (li) li.classList.add("picked");
+    el.insertAdjacentHTML("beforeend", `<p class="why">${esc(why)}${r.status === "guess" ? ' <span class="note">(said none fit — best guess)</span>' : ""}</p>`);
+  }, idx.length * 45 + 250);
+}
+
+const FLAG = {guess: "best guess — no candidate was a clear match", no_portion: "no portion for this unit",
+              not_found: "not in the database", no_good_match: "no good match"};
+
+function render(d) {
+  if (!d.rows.length) { $("tbl").innerHTML = '<p class="note">no food in that message</p>'; return; }
+  let h = "<table><tr><th>food</th><th>amount</th><th>database match</th><th>g</th><th>kcal</th><th>P</th><th>C</th><th>F</th></tr>";
+  for (const r of d.rows) {
+    const amt = `${r.qty} ${r.unit}${r.size ? " " + r.size : ""}${r.state ? ` <span class="src">${r.state}</span>` : ""}`;
+    const m = r.match ? `${esc(r.match)}${r.match_brand ? " [" + esc(r.match_brand) + "]" : ""}<br><span class="src">${SRC[r.src] || r.src} · ${esc(r.portion || "")}</span>` : "—";
+    const flag = FLAG[r.status] ? `<br><span class="note">${FLAG[r.status]}</span>` : "";
+    const f = v => v ?? "—";
+    h += `<tr><td>${esc(r.food)}</td><td>${amt}</td><td>${m}${flag}</td>` +
+         `<td class="${r.approx ? "approx" : ""}">${r.grams ?? "—"}${r.approx ? "~" : ""}</td>` +
+         `<td>${f(r.kcal)}</td><td>${f(r.protein)}</td><td>${f(r.carbs)}</td><td>${f(r.fat)}</td></tr>`;
+  }
+  const t = d.totals;
+  h += `<tr class="total"><td>total</td><td></td><td></td><td>${t.grams}</td><td>${Math.round(t.kcal)}</td><td>${t.protein}</td><td>${t.carbs}</td><td>${t.fat}</td></tr></table>`;
+  $("tbl").innerHTML = h;
+  $("meta").textContent = `${d.dt}s end-to-end (model parse ${d.dt_parse}s) · ~ = estimated portion · logged`;
+  step(4, "done", `${Math.round(t.kcal).toLocaleString()} kcal`);
+}
+
+// ---- vs Gemma: recorded replies from the 2026-10-08 benchmark (scripts/compare_chompass.py), same PC, same prompt
+let B = null;
+const NAME = {"food-distill": "food-distill (2B, trained)", "minicpm-2b-base-pipeline": "same 2B, untrained",
+  "gemma-e2b": "Gemma 4 E2B (5B)", "gemma-e4b": "Gemma 4 E4B (8B)", "gemma-26b": "Gemma 4 26B", "gemma-31b": "Gemma 4 31B"};
+fetch("/bench.json").then(r => r.json()).then(b => { B = b; benchPanel(); })
+  .catch(() => $("bench").innerHTML = '<p class="meta">benchmark data not found (scripts/build_bench_json.py)</p>');
+
+// /?q=<meal> fills and runs a meal (handy for prepared demo links)
+const Q = new URLSearchParams(location.search).get("q");
+if (Q) { $("text").value = Q; $("f").requestSubmit(); }
+
+$("rnd").onclick = () => {
+  if (!B) return;
+  $("text").value = B.meals[Math.floor(Math.random() * B.meals.length)].text;
+  $("f").requestSubmit();
+};
+
+function pctErr(p, t) {
+  if (p == null) return '<span class="bad">unusable reply</span>';
+  const e = Math.round(100 * (p - t) / t), a = Math.abs(e);
+  return `<span class="${a <= 10 ? "ok" : a > 25 ? "bad" : ""}">${e > 0 ? "+" : ""}${e}%</span>`;
+}
+
+function compare(text, d) {
+  if (!B) return;
+  const m = B.meals.find(x => norm(x.text) === norm(text));
+  if (!m) { $("vs").innerHTML = '<p class="meta">press ↻ benchmark meal to see a meal side by side with Gemma</p>'; return; }
+  const live = Math.round(d.totals.kcal), n = d.rows.filter(r => r.match).length;
+  const g = k => m[k].kcal == null ? null : m[k];
+  const gem = k => g(k) ? `${esc(m[k].name || "?")}${m[k].grams ? ` · ${Math.round(m[k].grams)} g` : ""} · one estimated number, no source` : "no usable answer";
+  $("vs").innerHTML = `<table>
+    <tr><th></th><th>kcal</th><th>vs truth</th><th>how</th></tr>
+    <tr><td>truth (benchmark label)</td><td>${m.truth}</td><td></td><td class="src">gold items × database rows</td></tr>
+    <tr><td class="us">food-distill · live now</td><td class="us">${live}</td><td>${pctErr(live, m.truth)}</td><td class="src">${n} database row${n === 1 ? "" : "s"}, itemised above</td></tr>
+    <tr><td>${NAME["gemma-e2b"]} · recorded</td><td>${m["gemma-e2b"].kcal ?? "—"}</td><td>${pctErr(m["gemma-e2b"].kcal, m.truth)}</td><td class="src">${gem("gemma-e2b")}</td></tr>
+    ${["gemma-e4b", "gemma-26b", "gemma-31b"].map(k => `<tr><td>${NAME[k]} · recorded</td><td>${m[k].kcal ?? "—"}</td><td>${pctErr(m[k].kcal, m.truth)}</td><td class="src">${gem(k)}</td></tr>`).join("")}
+  </table><p class="meta">Gemma replies recorded 2026-10-08 with Chompass's own prompt and parser (E2B/E4B on the same RTX 2060, 26B/31B through OpenRouter).</p>`;
+}
+
+function benchPanel() {
+  const S = B.summary, ALL = Object.keys(NAME).filter(k => S[k]);
+  const group = (title, key, fmt, hint, M = ALL) => {
+    const max = Math.max(...M.map(k => S[k][key]));
+    return `<div class="metric">${title} <span class="src">${hint}</span></div>` + M.map(k =>
+      `<div class="row" style="grid-column:1/-1" title="${NAME[k]}: ${fmt(S[k][key])}"><span class="who">${NAME[k]}</span>` +
+      `<span class="bar ${k === "food-distill" ? "us" : ""}" style="width:${(60 * S[k][key] / max).toFixed(1)}%"></span>` +
+      `<span class="val">${fmt(S[k][key])}</span></div>`).join("");
+  };
+  $("bench").innerHTML = `<p class="meta" style="margin-top:1rem">${B.n} real-world meals (typos, combos, takeout, home cooking), each model asked exactly the way Chompass asks:</p>
+    <div class="bars">
+      ${group("median calorie error per meal", "median_err", v => v + "%", "lower is better")}
+      ${group("meals within 10% of the truth", "within10", v => v + "%", "higher is better")}
+      ${group("time per meal (median), same RTX 2060", "sec_median", v => v + " s", "lower is better", ALL.filter(k => !S[k].cloud))}
+    </div>`;
+}
+</script>
+</body>
+</html>

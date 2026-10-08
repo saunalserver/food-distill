@@ -1,0 +1,46 @@
+### text
+## food-distill: n=42 parse_ok=100% wmape=39.9% kcal_mae=65.8 within20=69% med=0.42s
+## minicpm-2b-base-pipeline: n=42 parse_ok=95% wmape=46.2% kcal_mae=77.0 within20=57% med=0.65s
+## minicpm-2b-base: n=42 parse_ok=100% wmape=68.0% kcal_mae=110.6 within20=21% med=1.07s
+## gemma-e2b: n=42 parse_ok=100% wmape=19.1% kcal_mae=29.0 within20=74% med=1.29s
+## gemma-e4b: n=42 parse_ok=100% wmape=18.6% kcal_mae=29.8 within20=74% med=2.25s
+## gemma-26b: n=42 parse_ok=100% wmape=7.9% kcal_mae=12.0 within20=88% med=1.57s
+## gemma-31b: n=42 parse_ok=100% wmape=8.2% kcal_mae=14.1 within20=83% med=3.09s
+
+### realistic
+## food-distill: n=38 parse_ok=100% wmape=68.8% kcal_mae=125.8 within20=47% med=0.39s
+   branded    n= 8 wmape=347.9% within20=12%
+   household  n=12 wmape=21.2% within20=75%
+   multi      n= 6 wmape=15.2% within20=67%
+   vague      n=12 wmape=58.2% within20=33%
+## minicpm-2b-base-pipeline: n=38 parse_ok=66% wmape=44.0% kcal_mae=88.9 within20=40% med=0.74s
+   branded    n= 8 wmape=143.4% within20=0%
+   household  n=12 wmape=56.1% within20=55%
+   multi      n= 6 wmape=18.0% within20=60%
+   vague      n=12 wmape=45.8% within20=17%
+## minicpm-2b-base: n=38 parse_ok=100% wmape=79.3% kcal_mae=143.3 within20=11% med=0.87s
+   branded    n= 8 wmape=99.0% within20=0%
+   household  n=12 wmape=55.0% within20=25%
+   multi      n= 6 wmape=81.7% within20=0%
+   vague      n=12 wmape=86.3% within20=8%
+## gemma-e2b: n=38 parse_ok=100% wmape=36.0% kcal_mae=64.0 within20=55% med=1.29s
+   branded    n= 8 wmape=61.3% within20=50%
+   household  n=12 wmape=17.1% within20=83%
+   multi      n= 6 wmape=37.8% within20=33%
+   vague      n=12 wmape=37.4% within20=42%
+## gemma-e4b: n=38 parse_ok=100% wmape=34.5% kcal_mae=61.3 within20=58% med=2.24s
+   branded    n= 8 wmape=126.4% within20=50%
+   household  n=12 wmape=13.5% within20=83%
+   multi      n= 6 wmape=19.5% within20=67%
+   vague      n=12 wmape=31.5% within20=33%
+## gemma-26b: n=38 parse_ok=100% wmape=36.3% kcal_mae=65.5 within20=55% med=1.79s
+   branded    n= 8 wmape=167.3% within20=38%
+   household  n=12 wmape=4.8% within20=92%
+   multi      n= 6 wmape=18.0% within20=67%
+   vague      n=12 wmape=29.3% within20=25%
+## gemma-31b: n=38 parse_ok=100% wmape=36.3% kcal_mae=67.1 within20=61% med=1.72s
+   branded    n= 8 wmape=159.4% within20=38%
+   household  n=12 wmape=4.3% within20=92%
+   multi      n= 6 wmape=27.2% within20=50%
+   vague      n=12 wmape=21.1% within20=50%
+

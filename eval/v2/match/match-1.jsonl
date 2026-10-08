@@ -1,0 +1,245 @@
+{"id": "world-0017", "i": 2, "food": "salad", "best": 4439, "ok": [4439, 4440, 4409], "note": "garden side salad, no dressing; FNDDS lettuce-salad rows found via search (not in pool)"}
+{"id": "combos-0144", "i": 2, "food": "naan", "best": 2230, "ok": [2230, 18399, 9765, 19628], "note": ""}
+{"id": "homecook-0166", "i": 0, "food": "egg", "best": 1772, "ok": [1772, 11343, 13655, 1774, 1775, 1776, 1779, 1780, 23564, 20312, 20313], "note": ""}
+{"id": "vague-0174", "i": 0, "food": "mai tai", "best": 5294, "ok": [5294], "note": ""}
+{"id": "world-0027", "i": 0, "food": "thai iced tea", "best": 281363, "ok": [281363, 194789, 195409, 788657], "note": "no reference row for thai iced tea; RTD thai-tea rows closest (a large sweet restaurant version runs higher)"}
+{"id": "homecook-0004", "i": 0, "food": "egg", "best": 1815, "ok": [1815, 1816, 1817, 1818, 1821, 1823, 11192, 16973], "note": ""}
+{"id": "vague-0074", "i": 0, "food": "egg", "best": 1771, "ok": [1771, 11344, 23561, 23563, 13656, 20310], "note": ""}
+{"id": "fastfood-0249", "i": 2, "food": "super greens", "best": 4262, "ok": [4262, 5409], "note": "Panda Express not in db; super greens (steamed broccoli/kale/cabbage) approximated by cooked broccoli"}
+{"id": "fastfood-0192", "i": 3, "food": "coleslaw", "best": 4431, "ok": [4431, 8220, 6946, 8260, 10007, 6943, 7763, 17063], "note": "Raising Cane's not in db; fast-food coleslaw rows used"}
+{"id": "edge-0241", "i": 5, "food": "sandwich", "best": 1497, "ok": [1497], "note": ""}
+{"id": "homecook-0186", "i": 3, "food": "whole wheat bread", "best": 2326, "ok": [2326, 10608, 16560, 18893, 16303, 18891], "note": ""}
+{"id": "homecook-0051", "i": 1, "food": "spaghetti", "best": 16945, "ok": [16945, 16952], "note": ""}
+{"id": "edge-0220", "i": 1, "food": "hummus", "best": 2019, "ok": [2019, 12209, 13225, 2020], "note": ""}
+{"id": "typos-0139", "i": 0, "food": "arancini", "best": 479092, "ok": [479092, 551922, 760470, 617469, 798074, 540285, 518253, 677017, 678713, 746741, 780688, 551920, 240108, 161680, 601468, 707956], "note": "no reference row; OFF/branded arancini cluster 200-240"}
+{"id": "typos-0056", "i": 1, "food": "fried rice", "best": 3569, "ok": [3569, 3568, 5588, 18890, 21547, 21546], "note": ""}
+{"id": "vague-0272", "i": 1, "food": "milk", "best": 2, "ok": [2, 1], "note": ""}
+{"id": "typos-0216", "i": 2, "food": "butter", "best": 4771, "ok": [4771, 4772, 4773, 11330, 13556], "note": ""}
+{"id": "world-0117", "i": 0, "food": "menudo", "best": 186087, "ok": [186087, 24739, 350860, 166878, 34368, 33579], "note": "no reference row for menudo; canned branded stews used"}
+{"id": "edge-0227", "i": 7, "food": "salad", "best": 4439, "ok": [4439, 4440, 4409], "note": "plain salad, no dressing; rows found via search"}
+{"id": "homecook-0148", "i": 3, "food": "olive oil", "best": 4803, "ok": [4803, 20997, 24187, 13738, 9333], "note": ""}
+{"id": "fastfood-0100", "i": 1, "food": "curly fries", "best": 72465, "ok": [72465, 253309, 754962, 687850, 712457, 292493, 630647, 630201, 4075, 4080], "note": "Arby's Seasoned Curly Fries row (72465) found via search, not in pool; Arby's crinkle-fries row 392175 (155 kcal/100g) rejected as implausible"}
+{"id": "packaged-0221", "i": 1, "food": "avocado", "best": 3840, "ok": [3840, 9625, 14403, 4865, 9626, 14404, 19294], "note": ""}
+{"id": "packaged-0265", "i": 2, "food": "tootsie roll", "best": 5891, "ok": [5891, 213433, 119487, 102739, 102741, 119483, 135166, 119488, 184018], "note": ""}
+{"id": "combos-0007", "i": 0, "food": "egg", "best": 1772, "ok": [1772, 11343, 13655, 1774, 1775, 1776, 1779, 1780, 23564, 20312, 20313], "note": ""}
+{"id": "vague-0072", "i": 0, "food": "sweet potato", "best": 6403, "ok": [6403, 4316, 15073, 8054, 18360, 15078, 7227, 8462, 18362], "note": "butter is a separate logged item, so no-added-fat baked rows"}
+{"id": "combos-0074", "i": 1, "food": "mashed potatoes", "best": 4109, "ok": [4109, 4116, 6475, 7957, 21435, 4112, 4124, 7688], "note": ""}
+{"id": "world-0118", "i": 2, "food": "focaccia", "best": 2229, "ok": [2229, 5865, 18785], "note": ""}
+{"id": "edge-0265", "i": 6, "food": "gravy", "best": 1761, "ok": [1761, 1764, 14139], "note": ""}
+{"id": "packaged-0130", "i": 0, "food": "coffee", "best": 4992, "ok": [4992, 5069, 5066, 5045], "note": "2 tbsp coconut creamer not itemized; black coffee row used for the coffee item"}
+{"id": "vague-0224", "i": 0, "food": "edamame", "best": 2053, "ok": [2053, 15041, 18337, 19371, 6331, 18057], "note": ""}
+{"id": "combos-0274", "i": 3, "food": "coffee", "best": 4992, "ok": [4992, 5069, 5066, 5045], "note": ""}
+{"id": "typos-0018", "i": 0, "food": "beef and broccoli", "best": 1355, "ok": [1355], "note": ""}
+{"id": "edge-0172", "i": 0, "food": "cheese", "best": 326, "ok": [326, 13647, 13245, 19830, 8819, 356], "note": ""}
+{"id": "edge-0215", "i": 0, "food": "milk", "best": 2, "ok": [2, 1], "note": ""}
+{"id": "typos-0009", "i": 2, "food": "white toast", "best": 2216, "ok": [2216, 12845, 19641, 16300, 16540, 18987, 19643, 2218, 10746], "note": ""}
+{"id": "packaged-0270", "i": 0, "food": "eggnog", "best": 119, "ok": [119, 9178, 23684, 591977], "note": "Natrel not in db; generic eggnog reference used (branded dairy eggnogs run 128-160, 45%+ higher)"}
+{"id": "edge-0256", "i": 1, "food": "green salad", "best": 4439, "ok": [4439, 4440, 4409], "note": "green salad, no dressing"}
+{"id": "fastfood-0179", "i": 1, "food": "cajun fries", "best": 660204, "ok": [660204, 4075, 4080], "note": "no Popeyes row; OFF Cajun Fries + generic french fries"}
+{"id": "fastfood-0104", "i": 2, "food": "crazy sauce", "best": 4362, "ok": [4362, 4364], "note": "LC crazy sauce is a marinara-style dip; no exact row"}
+{"id": "combos-0033", "i": 4, "food": "orange juice", "best": 3803, "ok": [3803, 14507, 23928, 3804, 7019, 7020, 14608], "note": ""}
+{"id": "combos-0004", "i": 3, "food": "baked beans", "best": 2007, "ok": [2007, 2008, 2027, 6048, 13102, 2009], "note": ""}
+{"id": "packaged-0147", "i": 0, "food": "strawberry yogurt", "best": 178408, "ok": [178408, 736498, 470073, 469982], "note": ""}
+{"id": "typos-0200", "i": 0, "food": "sushi", "best": 3576, "ok": [3576, 3577, 3578, 3582, 3583, 3581, 3584, 3580, 3586, 3587, 3588], "note": ""}
+{"id": "world-0002", "i": 1, "food": "garlic naan", "best": 265970, "ok": [265970, 492054, 144275, 2230, 18399, 9765, 19628, 485479, 548016, 607413, 607419, 541119, 642278, 471237, 471409, 645193, 796721], "note": "no reference garlic naan; branded garlic naans plus plain-naan references"}
+{"id": "homecook-0093", "i": 0, "food": "vanilla skyr", "best": 644078, "ok": [644078, 565162, 517822, 655052, 8822, 8826], "note": "no skyr reference row; branded vanilla skyr plus Greek-yogurt fallbacks"}
+{"id": "combos-0021", "i": 0, "food": "egg", "best": 1772, "ok": [1772, 11343, 1774, 1775, 23564], "note": ""}
+{"id": "edge-0168", "i": 2, "food": "oil", "best": 4808, "ok": [4808, 4798, 4799, 4800, 4801, 4802, 4803, 4804, 4805, 4806, 4807, 4809, 4810, 8935, 8948, 8950, 8951, 9332, 9343, 9344, 24194], "note": "unspecified cooking oil; reference oils ~900 kcal are interchangeable"}
+{"id": "typos-0260", "i": 1, "food": "fromage blanc", "best": 521653, "ok": [521653, 611149, 673787, 804687, 532363, 539882, 540007, 610948, 623570], "note": "no reference row; OFF fromage blanc nature cluster 69-76"}
+{"id": "vague-0162", "i": 0, "food": "truly", "best": 509756, "ok": [509756, 509757, 509758, 509760, 5239], "note": ""}
+{"id": "homecook-0236", "i": 0, "food": "beef patty", "best": 472, "ok": [472, 15485, 15489, 15492, 19442, 6571, 9717, 11958, 11952, 15493, 7367, 6570], "note": ""}
+{"id": "typos-0198", "i": 0, "food": "brown sugar boba", "best": 5125, "ok": [5125, 668158, 732875, 436380, 437845, 394706, 400599, 407958], "note": "no brown-sugar-boba reference; FNDDS bubble tea (found via search) + RTD boba drinks; the 269-kcal row is a concentrate, rejected"}
+{"id": "fastfood-0001", "i": 1, "food": "fries", "best": 8641, "ok": [8641, 616433], "note": "OFF 'Mcdonald's Large' row at 444 kcal/100g rejected as wrong data"}
+{"id": "combos-0220", "i": 0, "food": "mixed grill", "best": 21741, "ok": [21741, 624367, 21740], "note": "no mixed-grill-platter row; cofid shish kebab (mixed grilled meats) is the closest reference"}
+{"id": "combos-0268", "i": 1, "food": "chips", "best": 4038, "ok": [4038, 4039, 2907], "note": "potato-chip rows found via search (not in pool); Sun Chips included as the typical Subway option"}
+{"id": "fastfood-0200", "i": 3, "food": "cream", "best": 211, "ok": [211, 9175], "note": "'1 cream' = half-and-half cup; row found via search (not in pool)"}
+{"id": "edge-0265", "i": 3, "food": "banana", "best": 3841, "ok": [3841, 11864, 14589, 22577, 13318], "note": ""}
+{"id": "combos-0074", "i": 3, "food": "roll", "best": 2271, "ok": [2271, 2272, 10715, 2282], "note": ""}
+{"id": "fastfood-0157", "i": 0, "food": "breakfast burrito", "best": 8707, "ok": [8707, 176175], "note": "no McDonald's row; SR fast-food breakfast burrito (egg+cheese+sausage) matches the McD recipe; found via search"}
+{"id": "edge-0182", "i": 0, "food": "coffee", "best": 4992, "ok": [4992, 4997, 5069, 5066, 5045, 5046], "note": ""}
+{"id": "world-0062", "i": 0, "food": "wonton soup", "best": 3777, "ok": [3777, 9741, 18471, 19090], "note": ""}
+{"id": "vague-0181", "i": 0, "food": "mimosa", "best": 5259, "ok": [5259], "note": ""}
+{"id": "typos-0010", "i": 2, "food": "ketchup", "best": 4350, "ok": [4350, 4351, 13297, 21922, 15320, 24227, 15324], "note": ""}
+{"id": "homecook-0053", "i": 2, "food": "egg", "best": 1769, "ok": [1769, 9207, 20315], "note": "raw egg used as pancake ingredient (hint says raw despite parsed state=cooked)"}
+{"id": "typos-0212", "i": 1, "food": "mustard", "best": 4702, "ok": [4702, 10154, 13242], "note": ""}
+{"id": "combos-0164", "i": 2, "food": "greek salad", "best": 21608, "ok": [21608, 18516], "note": "restaurant greek salad with dressing; the FNDDS no-dressing row (48 kcal) is undressed"}
+{"id": "homecook-0049", "i": 0, "food": "white bread", "best": 2215, "ok": [2215, 16559, 19633, 19638], "note": ""}
+{"id": "vague-0152", "i": 2, "food": "gummy worms", "best": 4976, "ok": [4976], "note": "FNDDS generic gummy-candy row; branded gummy-worm rows cluster 290-345 (13-27% below best), excluded by the 15% rule"}
+{"id": "combos-0155", "i": 0, "food": "poutine", "best": 18547, "ok": [18547], "note": ""}
+{"id": "fastfood-0072", "i": 2, "food": "biscuit", "best": 10006, "ok": [10006, 2418, 8222, 8259, 16278, 2421], "note": ""}
+{"id": "combos-0007", "i": 3, "food": "baked beans", "best": 2007, "ok": [2007, 2008, 2027, 6048, 13102, 2009], "note": ""}
+{"id": "fastfood-0268", "i": 0, "food": "greek gyro", "best": 1579, "ok": [1579, 18534], "note": "Arby's not in db; generic gyro sandwich"}
+{"id": "typos-0254", "i": 0, "food": "bone marrow", "best": 676405, "ok": [676405, 17765], "note": "no beef-marrow reference; OFF beef marrow (812) + CNF game marrow; the 409-kcal cooked caribou row rejected as implausible"}
+{"id": "vague-0132", "i": 2, "food": "sugar", "best": 4874, "ok": [4874, 7575, 13292], "note": ""}
+{"id": "combos-0031", "i": 3, "food": "sausage", "best": 808, "ok": [808, 807, 14243, 17396, 18999, 12504, 23161], "note": "Denny's not in db; the OFF 'Denny' rows are Henry Denny & Sons (Irish brand), not the restaurant \u2014 generic pork breakfast sausage used"}
+{"id": "typos-0229", "i": 0, "food": "salt and pepper squid", "best": 951, "ok": [951, 23512], "note": "no dedicated row; FNDDS fried calamari (found via search) as reference; OFF salt&pepper rows cluster 160-243; the SR fried-squid row (175) looks low"}
+{"id": "edge-0170", "i": 1, "food": "oats", "best": 3106, "ok": [3106, 22685, 24121, 10909, 9581, 14341, 14357, 16851, 19660], "note": ""}
+{"id": "world-0030", "i": 3, "food": "thai iced tea", "best": 281363, "ok": [281363, 194789, 195409, 788657], "note": "no reference row for thai iced tea; RTD thai-tea rows closest"}
+{"id": "homecook-0232", "i": 4, "food": "mozzarella", "best": 339, "ok": [339, 340, 341, 9164, 8820, 8765, 8766, 8767, 19847], "note": ""}
+{"id": "vague-0018", "i": 0, "food": "pizza", "best": 18240, "ok": [18240, 11212, 8237, 17804, 3230, 3229, 22295, 9967, 9961, 11211], "note": "leftover cheese pizza; FNDDS frozen-cheese rows found via search"}
+{"id": "homecook-0120", "i": 1, "food": "peas", "best": 8340, "ok": [8340, 15239, 22501, 21163, 15241], "note": ""}
+{"id": "combos-0031", "i": 0, "food": "pancake", "best": 2911, "ok": [2911, 2921, 2922], "note": "no Denny's row; generic pancakes NFS"}
+{"id": "combos-0258", "i": 1, "food": "chicken noodle soup", "best": 3766, "ok": [3766, 18513, 9476, 9463], "note": ""}
+{"id": "homecook-0074", "i": 1, "food": "chickpea", "best": 2035, "ok": [2035, 2033, 11677, 16040, 16057, 18777, 11720, 18778], "note": "200g canned chickpeas roasted at home; dry-roasted snack rows (323-402) rejected as wrong form"}
+{"id": "fastfood-0180", "i": 2, "food": "orange juice", "best": 3803, "ok": [3803, 14507, 23928, 3804, 7019, 7020, 3807, 14608], "note": ""}
+{"id": "combos-0217", "i": 0, "food": "galbi", "best": 401612, "ok": [401612, 505052], "note": "no reference row; branded marinated beef short-rib galbi"}
+{"id": "homecook-0248", "i": 2, "food": "short grain rice", "best": 6802, "ok": [6802, 6852, 16907, 6800, 6850, 16905], "note": ""}
+{"id": "combos-0009", "i": 4, "food": "toast", "best": 2216, "ok": [2216, 19641, 16300, 12845], "note": ""}
+{"id": "world-0002", "i": 3, "food": "samosa", "best": 3347, "ok": [3347, 18527], "note": ""}
+{"id": "vague-0068", "i": 0, "food": "breakfast sandwich", "best": 17042, "ok": [17042], "note": "generic fast-food egg & cheese sandwich is the only matching reference"}
+{"id": "vague-0237", "i": 1, "food": "french onion dip", "best": 238, "ok": [238], "note": ""}
+{"id": "combos-0212", "i": 1, "food": "congee", "best": 3035, "ok": [3035, 3600], "note": ""}
+{"id": "world-0044", "i": 1, "food": "spring roll", "best": 21803, "ok": [21803], "note": "cofid meat spring-roll takeaway is the only reference; OFF exact rows (197-250) excluded since a reference exists"}
+{"id": "vague-0274", "i": 4, "food": "syrup", "best": 4890, "ok": [4890, 4889, 7498, 16664, 5504, 7581], "note": ""}
+{"id": "edge-0222", "i": 1, "food": "butter", "best": 4771, "ok": [4771, 4772, 4773, 11330, 13556], "note": ""}
+{"id": "combos-0042", "i": 2, "food": "coffee", "best": 4992, "ok": [4992, 5069, 5066, 5045], "note": ""}
+{"id": "combos-0026", "i": 1, "food": "bacon", "best": 506, "ok": [506, 17416, 6241, 507, 13301, 14816, 2083], "note": ""}
+{"id": "vague-0082", "i": 0, "food": "espresso", "best": 4995, "ok": [4995, 4996, 17101, 9811, 17428, 12045, 23966], "note": ""}
+{"id": "typos-0063", "i": 0, "food": "espresso", "best": 4995, "ok": [4995, 4996, 17101, 9811, 17428, 12045, 23966], "note": ""}
+{"id": "fastfood-0270", "i": 0, "food": "chicken teriyaki bowl", "best": 584442, "ok": [584442, 274604, 404332, 446318, 501078, 594488, 589303, 631378, 507347, 38284, 202427, 748404], "note": "Edo Japan not in db; generic chicken teriyaki bowl rows 113-153"}
+{"id": "fastfood-0106", "i": 1, "food": "bread bowl", "best": 146850, "ok": [146850, 146854, 363236, 213431, 616057, 228774, 228763, 203789, 361887], "note": ""}
+{"id": "homecook-0187", "i": 0, "food": "egg white", "best": 1785, "ok": [1785, 10103, 23568, 13653, 10123, 13298], "note": ""}
+{"id": "world-0227", "i": 0, "food": "papa a la huancaina", "best": null, "ok": [], "note": "no huancaina or potatoes-in-cheese-sauce row anywhere in db"}
+{"id": "homecook-0101", "i": 2, "food": "soy sauce", "best": 2059, "ok": [2059, 12197, 16052, 2060, 10393, 24229, 12198, 15980, 12199], "note": ""}
+{"id": "vague-0186", "i": 0, "food": "wing", "best": 685, "ok": [685, 682, 692, 695], "note": ""}
+{"id": "packaged-0065", "i": 0, "food": "cheddar bunnies", "best": 60404, "ok": [60404, 60478, 59638, 440121, 328310, 328424, 440109, 59423, 60296], "note": ""}
+{"id": "combos-0008", "i": 1, "food": "bacon", "best": 506, "ok": [506, 17416, 6241, 507, 13301, 14816, 2083], "note": ""}
+{"id": "combos-0026", "i": 2, "food": "sausage", "best": 808, "ok": [808, 807, 14243, 17396, 18999, 12504, 23161], "note": "generic pork breakfast sausage"}
+{"id": "homecook-0187", "i": 3, "food": "cheddar", "best": 326, "ok": [326, 13647, 13245, 19830, 8819, 356], "note": ""}
+{"id": "typos-0118", "i": 2, "food": "coke zero", "best": 291317, "ok": [291317, 291319, 327184, 327216, 327219, 327222, 327229, 762939, 793755, 670705, 670634, 670632, 670633, 612721, 496097, 538445, 670767, 670664], "note": ""}
+{"id": "combos-0212", "i": 0, "food": "dim sum", "best": 748371, "ok": [748371, 726039, 744965, 744967, 162324, 293573], "note": "assorted dim sum; no reference row"}
+{"id": "edge-0132", "i": 3, "food": "gravy", "best": 1761, "ok": [1761, 1764, 14139], "note": ""}
+{"id": "world-0030", "i": 2, "food": "thai fish cake", "best": 679382, "ok": [679382, 714122], "note": "no reference row; branded thai fish cakes 145-173"}
+{"id": "fastfood-0157", "i": 2, "food": "salsa", "best": 4353, "ok": [4353, 4355, 4356, 4360, 12444, 9744], "note": ""}
+{"id": "edge-0256", "i": 7, "food": "brownie", "best": 2520, "ok": [2520, 2521, 2522, 10633, 16348, 18246, 24131, 12869, 16350, 18953, 2523], "note": ""}
+{"id": "world-0269", "i": 0, "food": "mint tea", "best": 5132, "ok": [5132, 5111], "note": "sweetened Moroccan mint tea; pre-sweetened brewed tea captures the sugar (unsweetened rows would miss ~60 kcal); 5132 found via search"}
+{"id": "edge-0176", "i": 2, "food": "oil", "best": 4808, "ok": [4808, 4798, 4799, 4800, 4801, 4802, 4803, 4804, 4805, 4806, 4807, 4809, 4810, 8935, 8948, 8950, 8951, 9332, 9343, 9344, 24194], "note": "unspecified cooking oil; reference oils ~900 kcal are interchangeable"}
+{"id": "homecook-0099", "i": 0, "food": "ezekiel bread", "best": 615871, "ok": [615871, 504587, 539419, 215844, 72484, 297969, 297973], "note": "exact Food for Life Ezekiel 4:9 row found via search (OFF)"}
+{"id": "fastfood-0243", "i": 1, "food": "fries", "best": 4080, "ok": [4080, 4075], "note": "Jollibee not in db; generic french fries"}
+{"id": "world-0059", "i": 1, "food": "egg tart", "best": 21895, "ok": [21895, 21890], "note": ""}
+{"id": "fastfood-0054", "i": 1, "food": "fries", "best": 8646, "ok": [8646], "note": ""}
+{"id": "fastfood-0072", "i": 1, "food": "red beans and rice", "best": 639945, "ok": [639945], "note": "exact Popeyes row (OFF); no comparable generic row within 15%"}
+{"id": "combos-0074", "i": 2, "food": "green beans", "best": 4469, "ok": [4469, 5420], "note": ""}
+{"id": "homecook-0051", "i": 2, "food": "tomato sauce", "best": 7974, "ok": [7974, 17533], "note": "plain canned tomato sauce; homemade/marinara-style rows are 2x+ higher"}
+{"id": "combos-0084", "i": 0, "food": "baked beans", "best": 2007, "ok": [2007, 2008, 2027, 6048, 13102, 2009], "note": ""}
+{"id": "homecook-0221", "i": 0, "food": "jasmine rice", "best": 3019, "ok": [3019, 22646, 6798, 16953], "note": "no cooked-jasmine reference; generic cooked white rice (rows found via search); Wegmans 'Jasmine Cooked Rice' at 225 kcal/100g rejected as wrong"}
+{"id": "vague-0043", "i": 3, "food": "cheese", "best": 326, "ok": [326, 321, 13647, 13245, 19830, 8819, 356], "note": ""}
+{"id": "fastfood-0268", "i": 1, "food": "fries", "best": 72465, "ok": [72465, 253309, 4080, 4075], "note": "Arby's Seasoned Curly Fries; the Arby's crinkle-fries row (155 kcal/100g) rejected as implausible"}
+{"id": "world-0062", "i": 1, "food": "pork bun", "best": 3341, "ok": [3341], "note": "FNDDS bao bun covers the filled steamed bun; OFF pork buns (159-292) excluded since a reference exists"}
+{"id": "world-0079", "i": 1, "food": "gochujang", "best": 584454, "ok": [584454, 442669, 771318, 608308, 787614, 508490, 787181, 787559], "note": "no reference row; gochujang cluster ~200-233"}
+{"id": "homecook-0236", "i": 3, "food": "pickle", "best": 4695, "ok": [4695, 4714, 6478, 13235, 6483, 15323], "note": ""}
+{"id": "fastfood-0059", "i": 1, "food": "chicken fries", "best": 500492, "ok": [500492, 590, 282090, 112484, 284021, 83941], "note": "no BK row; retail chicken-fries rows + generic fried chicken"}
+{"id": "combos-0267", "i": 1, "food": "taters", "best": 324699, "ok": [324699, 172297, 468294, 149254, 153833, 46647, 149738, 207417, 172976, 459604, 558701, 42199, 804157, 654311, 83873, 750516, 449814], "note": "Mary Brown's not in db; generic tater tots/wedges (wedge rows found via search)"}
+{"id": "world-0138", "i": 2, "food": "croutons", "best": 2314, "ok": [2314, 10672, 16420, 10671, 16419, 22761, 22764], "note": ""}
+{"id": "fastfood-0241", "i": 0, "food": "butter chicken poutine", "best": 18547, "ok": [18547], "note": "Smoke's not in db; generic poutine (misses the butter-chicken sauce, slight underestimate)"}
+{"id": "world-0131", "i": 0, "food": "spaghetti alle vongole", "best": 606549, "ok": [606549], "note": "no reference row; OFF spaghetti-with-clams is the exact dish"}
+{"id": "world-0034", "i": 0, "food": "khao man gai", "best": 1154, "ok": [1154, 1156, 1157, 1158], "note": "no khao man gai row; FNDDS chicken-and-rice is the closest equivalent (Nong's row is the sauce only); found via search"}
+{"id": "packaged-0203", "i": 1, "food": "coffee", "best": 4992, "ok": [4992, 5069, 5066, 5045], "note": ""}
+{"id": "world-0058", "i": 3, "food": "jasmine tea", "best": 5107, "ok": [5107, 23974, 15573, 5105], "note": ""}
+{"id": "fastfood-0169", "i": 1, "food": "rice", "best": 3019, "ok": [3019, 6798, 16953, 6800, 16905, 7632, 18463], "note": "item state parsed 'raw' contradicts hint; steamed cooked rice intended"}
+{"id": "typos-0103", "i": 1, "food": "orange", "best": 3788, "ok": [3788, 7017, 14607, 13280, 7836, 7838, 14503, 14504, 22594], "note": ""}
+{"id": "edge-0167", "i": 2, "food": "olive oil", "best": 4803, "ok": [4803, 20997, 24187, 13738, 9333], "note": ""}
+{"id": "combos-0008", "i": 0, "food": "egg", "best": 1772, "ok": [1772, 11343, 13655, 1774, 1775, 1776, 1779, 1780, 23564, 20312, 20313], "note": ""}
+{"id": "edge-0093", "i": 0, "food": "pizza", "best": 3292, "ok": [3291, 3292], "note": "FNDDS no-cheese pizza rows found via search"}
+{"id": "edge-0132", "i": 0, "food": "turkey", "best": 21979, "ok": [21979, 21977, 21972], "note": "dark-meat row 21972 added via search"}
+{"id": "homecook-0236", "i": 1, "food": "cheddar", "best": 326, "ok": [326, 13647, 13245, 19830, 8819, 356], "note": ""}
+{"id": "vague-0201", "i": 1, "food": "tequila", "best": 5322, "ok": [5322], "note": ""}
+{"id": "combos-0007", "i": 1, "food": "bacon", "best": 506, "ok": [506, 17416, 6241, 507, 13301, 14816, 2083], "note": ""}
+{"id": "world-0131", "i": 3, "food": "lemon soda", "best": 32799, "ok": [32799, 179680, 392915, 404263, 170660, 544081, 578115, 11125, 15529, 19102, 346261, 318805], "note": "no Italian-lemon-soda reference; branded Italian sodas + generic lemon-lime"}
+{"id": "edge-0227", "i": 2, "food": "yogurt", "best": 35, "ok": [35], "note": "plain whole-milk yogurt; lowfat (63) and NFS (94) rows fall outside 15%"}
+{"id": "typos-0001", "i": 0, "food": "big mac", "best": 8640, "ok": [8640, 1533, 19706], "note": ""}
+{"id": "world-0155", "i": 1, "food": "mashed potato", "best": 4109, "ok": [4109, 4116, 6475, 7957, 21435, 4112, 4124, 7688], "note": ""}
+{"id": "packaged-0061", "i": 0, "food": "cinnamon sugar pita chips", "best": 323820, "ok": [323820, 323918, 328845, 405724, 331110, 62431, 2832], "note": ""}
+{"id": "typos-0110", "i": 1, "food": "tomato soup", "best": 4376, "ok": [4376, 4377], "note": "canned tomato soup as prepared; condensed-undiluted and cream-of rows excluded"}
+{"id": "edge-0256", "i": 4, "food": "coleslaw", "best": 4432, "ok": [4432, 4434, 22093, 20049], "note": ""}
+{"id": "world-0138", "i": 0, "food": "bouillabaisse", "best": 1334, "ok": [1334], "note": "cofid homemade (139) and OFF rows deviate >15%"}
+{"id": "typos-0116", "i": 1, "food": "egg", "best": 1771, "ok": [1771, 11344, 13656, 23561, 23563, 20310], "note": "egg in ramen = boiled/poached; rows found via search (not in pool)"}
+{"id": "combos-0247", "i": 0, "food": "chili nachos", "best": 3193, "ok": [3193, 3194, 3195], "note": ""}
+{"id": "homecook-0137", "i": 2, "food": "curry paste", "best": 20135, "ok": [20135], "note": "curry type unknown; generic reference used (Thai-style pastes run 88-133)"}
+{"id": "combos-0108", "i": 1, "food": "shrimp", "best": 13100, "ok": [13100, 23464, 23465, 979], "note": ""}
+{"id": "world-0005", "i": 3, "food": "gulab jamun", "best": 20479, "ok": [20479, 20478], "note": ""}
+{"id": "fastfood-0064", "i": 2, "food": "pepsi", "best": 568106, "ok": [568106, 499968, 796452, 649666, 513203, 447071, 499962, 499970, 499971, 500017, 567352, 567460, 567462, 568102, 649675, 785952], "note": "the 18-kcal Pepsi rows rejected as wrong"}
+{"id": "homecook-0053", "i": 3, "food": "whole milk", "best": 2, "ok": [2, 9, 9185, 13290, 13641, 10137, 20898], "note": ""}
+{"id": "packaged-0235", "i": 1, "food": "pea milk", "best": 260470, "ok": [260470, 744208], "note": ""}
+{"id": "combos-0008", "i": 6, "food": "mushroom", "best": 20950, "ok": [20950, 20948, 20949], "note": "full-english mushrooms are pan-fried; FNDDS 'Fried mushrooms' (222, breaded-appetizer style) excluded"}
+{"id": "vague-0046", "i": 4, "food": "roll", "best": 2271, "ok": [2271, 2272, 10715, 2282], "note": ""}
+{"id": "packaged-0196", "i": 0, "food": "sriracha", "best": 9108, "ok": [9108, 57080, 441106], "note": "SR row is Huy Fong's own Tuong Ot Sriracha; the 0-kcal rows are label rounding, rejected"}
+{"id": "combos-0042", "i": 1, "food": "home fries", "best": 4089, "ok": [4089, 4091, 4092, 4090, 4093], "note": ""}
+{"id": "typos-0265", "i": 1, "food": "burger", "best": 1537, "ok": [1537, 1539, 8248, 1541, 19710, 1543, 1536], "note": "FNDDS Hamburger NFS found via search"}
+{"id": "vague-0234", "i": 0, "food": "pizza", "best": 197657, "ok": [197657, 197393, 3229, 3230, 9961, 11211, 9967, 8237, 18240, 11212, 17804, 22295], "note": "personal-size cheese pizza; DiGiorno personal + generic cheese-pizza rows"}
+{"id": "fastfood-0192", "i": 5, "food": "lemonade", "best": 4793, "ok": [4793], "note": "Cane's not in db; mayo-based fry-sauce reference is closest; found via search"}
+{"id": "homecook-0044", "i": 2, "food": "chicken breast", "best": 9454, "ok": [9454, 19005, 19903, 9456, 19902, 19904], "note": ""}
+{"id": "packaged-0053", "i": 0, "food": "nacho cheese doritos", "best": 327946, "ok": [327946, 326285, 328654, 328952, 62298, 483008, 483363, 800866, 509087, 452187, 794167, 639839, 654797, 452258], "note": ""}
+{"id": "homecook-0062", "i": 3, "food": "olive oil", "best": 4803, "ok": [4803, 20997, 24187, 13738, 9333], "note": ""}
+{"id": "vague-0016", "i": 0, "food": "tea", "best": 5105, "ok": [5105, 15573, 23973], "note": "splash of milk is negligible; black-tea row"}
+{"id": "homecook-0099", "i": 1, "food": "avocado", "best": 3840, "ok": [3840, 9625, 14403, 4865, 9626, 14404, 19294], "note": ""}
+{"id": "typos-0048", "i": 1, "food": "strawberry", "best": 3900, "ok": [3900, 5682, 14634, 22581], "note": ""}
+{"id": "vague-0040", "i": 0, "food": "rice", "best": 21564, "ok": [21564, 22677, 21558, 21554, 6799, 7680, 6851, 13415, 21557], "note": "state 'raw' = dry rice as the hint confirms"}
+{"id": "fastfood-0154", "i": 0, "food": "chicken nugget", "best": 11217, "ok": [11217, 709, 710, 711, 713, 714, 8715, 712], "note": ""}
+{"id": "homecook-0148", "i": 2, "food": "kale", "best": 4216, "ok": [4216, 15224, 15126], "note": ""}
+{"id": "edge-0228", "i": 5, "food": "salmon", "best": 903, "ok": [903, 902, 904], "note": "hint says cooked (dinner) despite parsed state=raw"}
+{"id": "vague-0197", "i": 3, "food": "popcorn", "best": 2833, "ok": [2833, 2840, 2841, 2843, 8167, 21302], "note": ""}
+{"id": "fastfood-0192", "i": 4, "food": "canes sauce", "best": 5187, "ok": [5187, 9804], "note": ""}
+{"id": "edge-0251", "i": 14, "food": "broccoli", "best": 4262, "ok": [4262, 5409], "note": "dinner side; hint says cooked despite parsed state=raw"}
+{"id": "packaged-0188", "i": 0, "food": "chunky chicken noodle soup", "best": 12468, "ok": [12468, 66365, 325797, 328346, 376817, 315436, 58987, 376915, 440710, 436330, 376822], "note": ""}
+{"id": "fastfood-0104", "i": 0, "food": "pepperoni pizza", "best": 9968, "ok": [9968, 11208, 3252, 3253, 3254, 17207, 10016, 9973, 11200, 9972, 11199], "note": ""}
+{"id": "typos-0141", "i": 2, "food": "butter", "best": 4771, "ok": [4771, 4772, 4773, 11330, 13556], "note": ""}
+{"id": "combos-0220", "i": 2, "food": "fattoush", "best": null, "ok": [], "note": "no believable fattoush-as-served row (OFF 'Fattoush' 609901 is oil-like data; Oasis 33 is greens-only)"}
+{"id": "homecook-0129", "i": 3, "food": "jasmine rice", "best": 4593, "ok": [4593, 4594], "note": "stir-fried mixed sweet peppers; green/red cooked rows bracket the mix"}
+{"id": "homecook-0209", "i": 0, "food": "brown rice pasta", "best": 9946, "ok": [9946], "note": "only one cooked brown-rice-pasta row; dry rows are a state mismatch"}
+{"id": "combos-0209", "i": 0, "food": "spider roll", "best": null, "ok": [], "note": "no spider roll / soft-shell-crab sushi row; generic sushi NFS (94) would underestimate a fried-crab roll by ~40%"}
+{"id": "edge-0095", "i": 0, "food": "curry", "best": 1054, "ok": [1054, 1005, 2048, 1077, 20231, 20163], "note": "curry type unspecified; chicken curry as default, other no-coconut curries acceptable"}
+{"id": "world-0014", "i": 0, "food": "saag paneer", "best": 4248, "ok": [4248], "note": "FNDDS palak paneer is the same dish; takeout OFF versions run 145-212"}
+{"id": "vague-0274", "i": 5, "food": "orange juice", "best": 3803, "ok": [3803, 14507, 23928, 3804, 7019, 7020, 14608], "note": ""}
+{"id": "world-0058", "i": 2, "food": "lo mai gai", "best": null, "ok": [], "note": "no lo mai gai / sticky-rice-with-meat row; would need splitting into sticky rice + chicken"}
+{"id": "world-0048", "i": 2, "food": "egg roll", "best": 3319, "ok": [3319, 5587, 22383, 3318, 3320], "note": ""}
+{"id": "fastfood-0135", "i": 2, "food": "mustard", "best": 4702, "ok": [4702, 10154], "note": "Nathan's own rows show 0 kcal/100g (label rounding) \u2014 rejected; generic prepared mustard used"}
+{"id": "packaged-0006", "i": 0, "food": "skittles", "best": 6763, "ok": [6763, 643712, 643683, 643717, 643677, 472870, 473152, 198581, 16789], "note": ""}
+{"id": "world-0112", "i": 0, "food": "cochinita pibil torta", "best": null, "ok": [], "note": "no Mexican torta rows; bolillo + cochinita would need splitting"}
+{"id": "combos-0163", "i": 2, "food": "garlic finger", "best": 472615, "ok": [472615, 480636, 2243, 18799, 18537, 2244, 8709, 2279], "note": "no garlic-fingers reference; cheesy garlic-bread rows acceptable"}
+{"id": "homecook-0024", "i": 3, "food": "olive oil", "best": 4803, "ok": [4803, 20997, 24187, 13738, 9333], "note": ""}
+{"id": "world-0259", "i": 1, "food": "five alive", "best": 474917, "ok": [474917, 474916, 474978, 474997, 474940, 474951, 667302, 15557, 540553], "note": "exact brand rows 48-50; frozen-concentrate rows (162+) rejected"}
+{"id": "homecook-0271", "i": 0, "food": "salmon", "best": 904, "ok": [904, 903, 902, 23337, 21624, 9919], "note": ""}
+{"id": "homecook-0029", "i": 0, "food": "spaghetti", "best": 16945, "ok": [16945, 16952], "note": ""}
+{"id": "packaged-0220", "i": 1, "food": "turkey", "best": 10861, "ok": [10861, 14229, 17655, 17233], "note": ""}
+{"id": "packaged-0211", "i": 0, "food": "chocolate chip granola minis", "best": 44787, "ok": [44787, 163131, 413398], "note": ""}
+{"id": "homecook-0136", "i": 1, "food": "2% greek yogurt", "best": 40, "ok": [40, 8823], "note": ""}
+{"id": "fastfood-0185", "i": 1, "food": "fries", "best": 4075, "ok": [4075, 4080], "note": "Five Guys not in db; fresh-cut fries row"}
+{"id": "world-0155", "i": 3, "food": "bitter", "best": 19502, "ok": [19502], "note": "English bitter (ale)"}
+{"id": "fastfood-0218", "i": 0, "food": "chipotle chicken avocado melt", "best": 422322, "ok": [422322, 333105, 359832, 506399], "note": "no Panera row; chipotle-chicken sandwich/wrap equivalents"}
+{"id": "packaged-0265", "i": 0, "food": "nerds", "best": 348115, "ok": [348115], "note": "mini packs = regular Nerds; other OFF rows are gummies/rope variants"}
+{"id": "world-0048", "i": 0, "food": "kung pao chicken", "best": 1413, "ok": [1413, 5596, 18670], "note": ""}
+{"id": "packaged-0189", "i": 0, "food": "minestrone", "best": 328339, "ok": [328339, 59541, 441706, 328446, 376588, 334824, 59702, 60669, 4731], "note": ""}
+{"id": "vague-0072", "i": 1, "food": "butter", "best": 4771, "ok": [4771, 4772, 4773, 11330, 13556, 19713, 11350, 11331], "note": ""}
+{"id": "combos-0132", "i": 0, "food": "cheeseburger", "best": 1505, "ok": [1505, 1509, 8240, 1507, 8249, 19707, 1512, 1513, 1518, 1519, 1520, 22327, 1511, 1504, 1531, 1530, 8294, 9985, 1522, 1523, 1524, 1525, 1527, 1528], "note": ""}
+{"id": "fastfood-0249", "i": 0, "food": "broccoli beef", "best": 1355, "ok": [1355], "note": "Panda Express not in db; generic FNDDS beef and broccoli (CNF stir-fry row at 116 is 27% lower)"}
+{"id": "edge-0228", "i": 2, "food": "almond", "best": 2102, "ok": [2102, 8487, 2106, 2104, 2105, 13383], "note": ""}
+{"id": "vague-0127", "i": 0, "food": "filter coffee", "best": 4992, "ok": [4992, 4997, 5045, 5046, 5066, 5069], "note": "splash of cream not itemized; black coffee row used"}
+{"id": "world-0269", "i": 1, "food": "msemen", "best": 641623, "ok": [641623], "note": "only msemen row (OFF); the honey is on the side, not included"}
+{"id": "world-0239", "i": 1, "food": "red cabbage", "best": 19725, "ok": [19725, 4510], "note": "braised red cabbage with apple is the classic German prep"}
+{"id": "homecook-0082", "i": 4, "food": "sesame oil", "best": 4807, "ok": [4807, 21002, 24191, 13740, 8936], "note": ""}
+{"id": "packaged-0132", "i": 0, "food": "chocolate milk", "best": 85, "ok": [85, 83, 84, 86, 88, 96], "note": "Milk2Go not in db; reduced-fat chocolate milk"}
+{"id": "combos-0108", "i": 2, "food": "fries", "best": 4080, "ok": [4080, 4075], "note": "generic fries; no brand itemized"}
+{"id": "edge-0227", "i": 4, "food": "chips", "best": 4038, "ok": [4038, 4039], "note": ""}
+{"id": "homecook-0098", "i": 4, "food": "coconut milk", "best": 8093, "ok": [8093, 15386, 15420, 20011, 23950, 2185], "note": "canned coconut milk for cooking"}
+{"id": "edge-0122", "i": 0, "food": "tomato basil soup", "best": 4376, "ok": [4376, 4377, 21782, 22105, 22118], "note": "tomato basil approximated by plain tomato soup; richer cafe versions excluded"}
+{"id": "edge-0251", "i": 12, "food": "salmon", "best": 903, "ok": [903, 902, 904], "note": "hint says cooked despite parsed state=raw"}
+{"id": "vague-0237", "i": 0, "food": "ripple chips", "best": 4038, "ok": [4038, 4039, 4055], "note": "ripple = plain ridged potato chips; branded ripple rows excluded (reference exists)"}
+{"id": "typos-0158", "i": 0, "food": "hot pocket", "best": 3351, "ok": [3351, 3355, 3354, 3356, 3353, 440355, 440350, 440349, 440351, 376607, 11246, 10027, 460825, 197644, 197898, 33199, 460827, 667191, 460819, 441568, 11247], "note": "unspecified flavor; FNDDS hot-pocket NFS + branded HOT POCKETS"}
+{"id": "packaged-0257", "i": 0, "food": "pepperoni pizza", "best": 197373, "ok": [197373, 197734, 232083, 306771, 306796, 395860, 290376, 3252, 3253, 3254, 10016], "note": ""}
+{"id": "edge-0241", "i": 8, "food": "cheese", "best": 326, "ok": [326, 321, 13647, 13245, 19830, 8819, 356], "note": ""}
+{"id": "fastfood-0172", "i": 1, "food": "onion rings", "best": 8691, "ok": [8691, 4672, 6947, 7764, 7760], "note": ""}
+{"id": "fastfood-0052", "i": 1, "food": "fries", "best": 8646, "ok": [8646], "note": ""}
+{"id": "world-0233", "i": 0, "food": "croqueta", "best": 1125, "ok": [1125], "note": "Spanish ham croquetas \u2248 FNDDS ham croquette; OFF exact rows excluded (reference exists)"}
+{"id": "typos-0235", "i": 2, "food": "collard greens", "best": 4194, "ok": [4194, 8327, 14899, 6443, 15162], "note": ""}
+{"id": "edge-0167", "i": 1, "food": "quinoa", "best": 6794, "ok": [6794, 16925, 22689], "note": ""}
+{"id": "homecook-0129", "i": 1, "food": "mixed peppers", "best": 3019, "ok": [3019, 22646, 6798, 16953], "note": "no cooked-jasmine reference; generic cooked white rice"}
+{"id": "homecook-0020", "i": 3, "food": "butter", "best": 4771, "ok": [4771, 4772, 4773, 11330, 13556, 19713, 11350, 11331], "note": ""}
+{"id": "homecook-0085", "i": 1, "food": "brown rice", "best": 7623, "ok": [7623, 16926, 13414, 22679, 21543, 21541, 21545, 16852, 7626], "note": ""}
+{"id": "typos-0216", "i": 0, "food": "egg", "best": 1771, "ok": [1771, 11344, 23561, 23563, 13656, 20310], "note": ""}
+{"id": "fastfood-0104", "i": 1, "food": "crazy bread", "best": 2243, "ok": [2243, 2244, 8709, 18799, 18537, 472615], "note": "no Little Caesars row; crazy bread \u2248 garlic-butter breadsticks"}
+{"id": "typos-0230", "i": 0, "food": "congee", "best": 3035, "ok": [3035, 3600], "note": ""}
+{"id": "world-0037", "i": 2, "food": "cha gio", "best": 21803, "ok": [21803], "note": "cha gio = fried Vietnamese spring rolls; cofid meat spring-roll row"}
+{"id": "fastfood-0204", "i": 0, "food": "iced coffee", "best": 5048, "ok": [5048, 5049], "note": "Tim's exact row is Double Double (sweetened) \u2014 wrong prep; iced-latte rows closest to milk-no-sugar"}
+{"id": "combos-0084", "i": 1, "food": "toast", "best": 2216, "ok": [2216, 19641, 16300, 12845], "note": ""}
+{"id": "edge-0227", "i": 5, "food": "protein bar", "best": 2744, "ok": [2744, 2739, 2741, 11078, 12706, 2734, 2737, 11057, 2735], "note": ""}

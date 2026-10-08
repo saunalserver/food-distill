@@ -1,0 +1,12 @@
+# built locally, never committed
+data/fooddb.sqlite
+data/raw/
+data/gen/
+data/train.jsonl
+data/val.jsonl
+data/app.sqlite
+models/
+out/
+*.gguf
+.venv/
+__pycache__/

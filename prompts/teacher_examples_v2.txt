@@ -1,0 +1,44 @@
+large double double and a boston cream at tims
+{"items":[{"food":"coffee","brand":"tim hortons","qty":1,"unit":"serving","size":"large","state":"","prep":""},{"food":"cream","brand":"","qty":2,"unit":"tbsp","size":"","state":"","prep":""},{"food":"sugar","brand":"","qty":2,"unit":"tsp","size":"","state":"","prep":""},{"food":"boston cream donut","brand":"tim hortons","qty":1,"unit":"piece","size":"","state":"","prep":""}]}
+
+2 slices sourdough toast w butter n strawberry jam, black coffee
+{"items":[{"food":"sourdough toast","brand":"","qty":2,"unit":"slice","size":"","state":"","prep":""},{"food":"butter","brand":"","qty":1,"unit":"serving","size":"","state":"","prep":""},{"food":"strawberry jam","brand":"","qty":1,"unit":"serving","size":"","state":"","prep":""},{"food":"black coffee","brand":"","qty":1,"unit":"serving","size":"","state":"","prep":""}]}
+
+butter chicken w rice and 2 garlic naan
+{"items":[{"food":"butter chicken","brand":"","qty":1,"unit":"serving","size":"","state":"","prep":""},{"food":"rice","brand":"","qty":1,"unit":"serving","size":"","state":"raw","prep":""},{"food":"garlic naan","brand":"","qty":2,"unit":"piece","size":"","state":"","prep":""}]}
+
+meal prep: 180g chicken breast, 75g basmati, 1 tbsp olive oil, 150g broccoli steamed
+{"items":[{"food":"chicken breast","brand":"","qty":180,"unit":"g","size":"","state":"raw","prep":""},{"food":"basmati rice","brand":"","qty":75,"unit":"g","size":"","state":"raw","prep":""},{"food":"olive oil","brand":"","qty":1,"unit":"tbsp","size":"","state":"","prep":""},{"food":"broccoli","brand":"","qty":150,"unit":"g","size":"","state":"cooked","prep":"steamed"}]}
+
+1 cup cooked jasmine rice w 2 fried eggs
+{"items":[{"food":"jasmine rice","brand":"","qty":1,"unit":"cup","size":"","state":"cooked","prep":""},{"food":"egg","brand":"","qty":2,"unit":"piece","size":"","state":"cooked","prep":"fried"}]}
+
+big mac meal w a diet coke
+{"items":[{"food":"big mac","brand":"mcdonald's","qty":1,"unit":"piece","size":"","state":"","prep":""},{"food":"french fries","brand":"mcdonald's","qty":1,"unit":"serving","size":"medium","state":"","prep":""},{"food":"diet coke","brand":"coca-cola","qty":1,"unit":"serving","size":"medium","state":"","prep":""}]}
+
+full english w extra bacon
+{"items":[{"food":"egg","brand":"","qty":1,"unit":"piece","size":"","state":"cooked","prep":"fried"},{"food":"bacon","brand":"","qty":2,"unit":"slice","size":"","state":"cooked","prep":""},{"food":"sausage","brand":"","qty":1,"unit":"piece","size":"","state":"cooked","prep":""},{"food":"baked beans","brand":"","qty":1,"unit":"serving","size":"","state":"","prep":""},{"food":"toast","brand":"","qty":1,"unit":"slice","size":"","state":"","prep":""},{"food":"tomato","brand":"","qty":1,"unit":"piece","size":"","state":"cooked","prep":"grilled"},{"food":"mushroom","brand":"","qty":1,"unit":"serving","size":"","state":"cooked","prep":"fried"}]}
+
+venti iced caramel macchiato w oat milk + 1 extra pump
+{"items":[{"food":"iced caramel macchiato","brand":"starbucks","qty":1,"unit":"serving","size":"large","state":"","prep":"with oat milk"},{"food":"caramel syrup","brand":"starbucks","qty":1,"unit":"serving","size":"","state":"","prep":""}]}
+
+2 pints of lager n a basket of wings w blue cheese
+{"items":[{"food":"lager","brand":"","qty":2,"unit":"pint","size":"","state":"","prep":""},{"food":"chicken wings","brand":"","qty":1,"unit":"serving","size":"","state":"","prep":""},{"food":"blue cheese dressing","brand":"","qty":1,"unit":"serving","size":"","state":"","prep":""}]}
+
+bowl of oatmeal w a sliced banana and a drizzle of honey
+{"items":[{"food":"oatmeal","brand":"","qty":1,"unit":"bowl","size":"","state":"","prep":""},{"food":"banana","brand":"","qty":1,"unit":"piece","size":"","state":"raw","prep":""},{"food":"honey","brand":"","qty":1,"unit":"tsp","size":"","state":"","prep":""}]}
+
+40g oats w 250ml 2% milk
+{"items":[{"food":"oats","brand":"","qty":40,"unit":"g","size":"","state":"raw","prep":""},{"food":"2% milk","brand":"","qty":250,"unit":"ml","size":"","state":"","prep":""}]}
+
+had like 2-3 timbits n a small steeped tea w milk
+{"items":[{"food":"timbits","brand":"tim hortons","qty":2.5,"unit":"piece","size":"","state":"","prep":""},{"food":"steeped tea","brand":"tim hortons","qty":1,"unit":"serving","size":"small","state":"","prep":""},{"food":"milk","brand":"","qty":1,"unit":"tbsp","size":"","state":"","prep":""}]}
+
+lunch: leftover lasagna, a caesar salad. 2 eggs, actually 3, scrambled for dinner
+{"items":[{"food":"lasagna","brand":"","qty":1,"unit":"serving","size":"","state":"","prep":"leftover"},{"food":"caesar salad","brand":"","qty":1,"unit":"serving","size":"","state":"","prep":""},{"food":"egg","brand":"","qty":3,"unit":"piece","size":"","state":"cooked","prep":"scrambled"}]}
+
+glass of water and a stick of gum
+{"items":[]}
+
+bagel w cream cheese
+{"items":[{"food":"bagel","brand":"","qty":1,"unit":"piece","size":"","state":"","prep":""},{"food":"cream cheese","brand":"","qty":1,"unit":"serving","size":"","state":"","prep":""}]}
