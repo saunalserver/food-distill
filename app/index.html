@@ -11,7 +11,7 @@
   body { font-family: ui-monospace, Menlo, monospace; background: #111; color: #ddd;
          max-width: 52rem; margin: 2rem auto; padding: 0 1rem; }
   h1 { font-size: 1.1rem; } h1 span { color: #888; font-weight: normal; }
-  textarea { width: 100%; box-sizing: border-box; font: inherit; background: #1b1b1b;
+  textarea { width: 100%; box-sizing: border-box; font: inherit; background: #1b1b1b; resize: none;
              color: #eee; border: 1px solid #333; border-radius: 6px; padding: .6rem; }
   button { font: inherit; background: #2e7d32; color: #fff; border: 0; border-radius: 6px;
            padding: .5rem 1.2rem; cursor: pointer; margin-top: .4rem; }
@@ -251,7 +251,7 @@ function benchPanel() {
   const S = B.summary, ALL = Object.keys(NAME).filter(k => S[k]);
   const group = (title, key, fmt, hint, M = ALL) => {
     const max = Math.max(...M.map(k => S[k][key]));
-    return `<div class="metric">${title} <span class="src">${hint}</span></div>` + M.map(k =>
+    return `<div class="metric">${title} <span class="src">(${hint})</span></div>` + M.map(k =>
       `<div class="row" style="grid-column:1/-1" title="${NAME[k]}: ${fmt(S[k][key])}"><span class="who">${NAME[k]}</span>` +
       `<span class="bar ${k === "food-distill" ? "us" : ""}" style="width:${(60 * S[k][key] / max).toFixed(1)}%"></span>` +
       `<span class="val">${fmt(S[k][key])}</span></div>`).join("");
