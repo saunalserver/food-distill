@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
-<title>food-distill — local 2B meal logger</title>
+<title>food-distill — local 2.5B meal logger</title>
 <style>
   :root { color-scheme: dark; }
   body { font-family: ui-monospace, Menlo, monospace; background: #111; color: #ddd;
@@ -70,7 +70,7 @@
 </style>
 </head>
 <body class="pipeline">
-<h1>food-distill <span>— 2B model on a home GPU · {{N_FOODS}}-food database · no cloud</span></h1>
+<h1>food-distill <span>— 2.5B model on a home GPU · {{N_FOODS}}-food database · no cloud</span></h1>
 <form id="f">
   <textarea id="text" rows="2" placeholder="what did you eat? e.g. large double double and a boston cream, 2 slices toast w butter"></textarea>
   <button id="go">log it</button>
@@ -79,9 +79,9 @@
 </form>
 
 <div class="flow pipe-only">
-  <div class="step" id="s1"><b>1 · read</b>2B model turns text into items<i></i></div><span class="arrow">→</span>
+  <div class="step" id="s1"><b>1 · read</b>2.5B model turns text into items<i></i></div><span class="arrow">→</span>
   <div class="step" id="s2"><b>2 · search</b>{{N_FOODS}} foods, full-text<i></i></div><span class="arrow">→</span>
-  <div class="step" id="s3"><b>3 · pick</b>2B model chooses a real row<i></i></div><span class="arrow">→</span>
+  <div class="step" id="s3"><b>3 · pick</b>2.5B model chooses a real row<i></i></div><span class="arrow">→</span>
   <div class="step" id="s4"><b>4 · count</b>grams × database values<i></i></div>
 </div>
 
@@ -210,7 +210,7 @@ function render(d) {
 
 // ---- vs Gemma: recorded replies from the 2026-10-08 benchmark (scripts/compare_chompass.py), same PC, same prompt
 let B = null;
-const NAME = {"food-distill": "food-distill (2B, trained)", "minicpm-2b-base-pipeline": "same 2B, untrained",
+const NAME = {"food-distill": "food-distill (2.5B, trained)", "minicpm-2b-base-pipeline": "same 2.5B, untrained",
   "gemma-e2b": "Gemma 4 E2B (5B)", "gemma-e4b": "Gemma 4 E4B (8B)", "gemma-26b": "Gemma 4 26B", "gemma-31b": "Gemma 4 31B"};
 fetch("/bench.json").then(r => r.json()).then(b => { B = b; benchPanel(); })
   .catch(() => $("bench").innerHTML = '<p class="meta">benchmark data not found (scripts/build_bench_json.py)</p>');
