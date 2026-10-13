@@ -109,6 +109,38 @@ actually in it (coffee, 2 tbsp cream, 2 tsp sugar), and the cream cheese is its 
 
 ![Calorie table: five items, matched rows, grams, kcal, protein, carbs, fat and a total of 440 kcal](docs/img/count.png)
 
+## Run it yourself
+
+The trained model is a [release download](https://github.com/saunalserver/food-distill/releases/tag/v5b) (1.8 GB
+GGUF). The database is built on your machine from the public sources. You need Python 3 (tested on
+3.12), [llama.cpp](https://github.com/ggml-org/llama.cpp/releases) for its `llama-server`, and about 5 GB of free disk.
+
+```bash
+git clone https://github.com/saunalserver/food-distill.git && cd food-distill
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt   # two small packages, for the database build only
+
+.venv/bin/python scripts/get_data.py        # downloads the model + the six food-data sources (3.6 GB)
+.venv/bin/python scripts/build_fooddb.py    # builds data/fooddb.sqlite, about 5 minutes
+
+llama-server -m models/food-distill-v5b-Q5_K_M.gguf --port 8139 -ngl 99 -c 8192 -np 4 --temp 0
+python3 app/server.py                       # second terminal, then open http://127.0.0.1:8138
+```
+
+On Windows the venv's Python is `.venv\Scripts\python`.
+
+- **Hardware.** Everything here was built and timed on a 6 GB RTX 2060. Running the model on CPU only (drop
+  `-ngl 99`) has not been tested.
+- **Your food count may differ.** Open Food Facts republishes its dump, so the total can drift from the 804,773
+  above. The other five sources are fixed releases. A build from a fresh clone on 2026-10-12 gave exactly 804,773
+  and reproduced both worked examples on this page (943 and 440 kcal).
+- **Smaller download.** `scripts/get_data.py --skip off,usda_branded` leaves out the two big branded sources
+  (1.7 GB). Everyday generic foods still work; most packaged, brand-name products won't be found.
+- **Model on another machine.** Set `FD_MODEL_URL=http://<host>:8139/v1/chat/completions`. `FD_HOST` / `FD_PORT`
+  move the dashboard.
+- **From the shell.** `python3 scripts/dbsearch.py "big mac"` searches the database without the model.
+- **Chompass.** `python3 app/chompass_shim.py` serves an OpenAI-compatible endpoint on `127.0.0.1:8140`; put HTTPS
+  in front of it and add it in Chompass as a custom provider with model `food-distill`. Typed meals only.
+
 ## How it was built
 
 The full story, with numbers at each step, is in [docs/HOW-IT-WAS-BUILT.md](docs/HOW-IT-WAS-BUILT.md). In short:
@@ -133,6 +165,7 @@ The full story, with numbers at each step, is in [docs/HOW-IT-WAS-BUILT.md](docs
 | `app/server.py`, `app/index.html` | the demo dashboard in the GIF (Python standard library only) |
 | `app/chompass_shim.py` | an OpenAI-compatible endpoint so Chompass can use food-distill as a custom provider |
 | `prompts/` | the parse contract, the student's prompt, the output grammar, the teacher's worked examples |
+| `scripts/get_data.py` | downloads the trained model and the six public food-data sources |
 | `scripts/build_fooddb.py` | builds the 804,773-food database from the six public sources |
 | `scripts/or_gen.py`, `or_label.py`, `or_pick.py` | teacher data generation (budget-capped) |
 | `scripts/build_train_v5.py`, `train_student.py`, `export_student.py` | training set, QLoRA training, GGUF export |
@@ -141,8 +174,9 @@ The full story, with numbers at each step, is in [docs/HOW-IT-WAS-BUILT.md](docs
 | `eval/v2/` | the 2,199-meal test set with its labelling spec, blind relabels and adjudication |
 | `results/` | every model's raw replies for the head-to-head, and the reports |
 
-Not included: the built database (312 MB, rebuilt from the public sources by `scripts/build_fooddb.py`), the model
-weights, and the teacher-generated training data (the scripts that make it are here).
+Not in the repo itself: the model weights (a [release download](https://github.com/saunalserver/food-distill/releases/tag/v5b),
+fetched by `scripts/get_data.py`), the built database (312 MB, rebuilt from the public sources by
+`scripts/build_fooddb.py`), and the teacher-generated training data (the scripts that make it are here).
 
 ## Data sources
 

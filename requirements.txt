@@ -1,0 +1,6 @@
+# Only scripts/build_fooddb.py needs these (it reads CoFID's .xlsx and Ciqual's .xls).
+# The app, the search and the download script use the Python standard library only.
+openpyxl
+xlrd
+
+# Training your own model needs more; the pip line is at the top of scripts/train_student.py.
